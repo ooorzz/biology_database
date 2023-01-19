@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Algorithm</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+
+<!-- css files -->
+<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<!-- //css files -->
+
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+<div class="header">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<h1><a href="/">Bioinformatics</a></h1>
+		</div>
+
+		<!-- navbar-header -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/" class="hvr-underline-from-center">Home</a></li>
+				<li><a href="/problem" class="hvr-underline-from-center">Problem</a></li>
+				<li><a href="/algorithms" class="hvr-underline-from-center active">Algorithm</a></li>
+				<li><a href="/papers" class="hvr-underline-from-center">Paper</a></li>
+				<li><a href="/labs" class="hvr-underline-from-center">Lab</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</nav>
+</div>
+
+	<div class="col-md-12 container m-1">
+
+			<div style="background-color:rgba(0, 0, 0, 0.45);color: white;padding: 50px">
+				<h1>{{selectAlg.anameCN}} {{selectAlg.anameEN}}</h1>
+				<p style="font-size: large;margin: 2em 0">&emsp;&emsp;{{selectAlg.aintro}}</p>
+				<p style="font-size: large">&emsp;&emsp;代码实现链接：<u><a href={{selectAlg.alink}} style="color: white">{{selectAlg.alink}}</a></u></p>
+			</div>
+
+    </div>
+
+<!-- js-scripts -->
+<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+<!-- //js -->
+<!-- //js-scripts -->
+
+<!-- start-smoth-scrolling -->
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+<!-- start-smoth-scrolling -->
+
+</body>
+</html>

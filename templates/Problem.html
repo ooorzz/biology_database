@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Problem</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+
+<!-- css files -->
+<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<!-- //css files -->
+
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+<div class="header">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<h1><a href="/">Bioinformatics</a></h1>
+		</div>
+
+		<!-- navbar-header -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/" class="hvr-underline-from-center">Home</a></li>
+				<li><a href="/problem" class="hvr-underline-from-center active">Problem</a></li>
+				<li><a href="/algorithms" class="hvr-underline-from-center">Algorithm</a></li>
+				<li><a href="/papers" class="hvr-underline-from-center">Paper</a></li>
+				<li><a href="/labs" class="hvr-underline-from-center">Lab</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</nav>
+</div>
+
+<!-- services section -->
+<div class="services" id="services">
+		<div class="heading">
+			<h2>Bioinformatics Issues</h2>
+		</div>
+	<div class="container">
+		<div class="servicegrids">
+			<div class="servicetopgrids">
+				{% for problem in problemList %}
+				  <div class="col-md-4 servicegrid1">
+					  <h5>{{problem.id}}</h5>
+					  <h4>{{problem.problem_name}}</h4>
+					  <p>&emsp;&emsp;{{problem.pintro}}</p>
+<!--					  <h4><i class="fa fa-taxi" aria-hidden="true"></i>点击查看算法</h4>-->
+					  <p><a href="protoal?id={{problem.id}}" style="font-size:20px;color: #23B684">点击查看相关算法</a></p>
+				  </div>
+      			{% endfor %}
+				<div class="clearfix"></div>
+			</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //services section -->
+<!-- js-scripts -->
+<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+<!-- //js -->	
+<!-- //js-scripts -->
+
+<!-- start-smoth-scrolling -->
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+<!-- start-smoth-scrolling -->
+
+</body>
+</html>
